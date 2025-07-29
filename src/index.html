@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en" class="h-full" xmlns:x-intersect="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FangKnight</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <link href="./output.css" rel="stylesheet" />
+</head>
+<body class="h-full"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
+<section>
+    <div class="max-w-[1440px] justify-self-center h-[1142px] w-screen bg-[url('images/1.png')] bg-cover bg-center bg-no-repeat bg-fixed">
+        <div class="mx-auto max-w-[894px] pt-64 pb-[403px] text-center">
+            <h1 class="text-4xl font-bold text-white md:text-6xl">FangKnight</h1>
+            <div class="mt-6 flex justify-center gap-4">
+                <a href="#deliverMe" >
+                    <button class="bg-opacity-60 hover:bg-opacity-80 rounded-lg bg-black px-6 py-3 text-white underline cursor-pointer">Deliver Me!</button>
+                </a>
+                <a href="#contacts">
+                    <button
+                            class="rounded-lg bg-black bg-opacity-60 hover:bg-opacity-80 px-6 py-3 text-white underline transition-transform duration-300 ease-in-out z-50"
+                            :class="scrolled ? 'fixed  top-[4%] translate-x-[calc(35vw_-_2rem)]  opacity-60 z-50' : 'bg-opacity-60'"
+                    >
+                        Bite Me!
+                    </button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-black">
+    <div
+            x-data="{
+    scale: 1,
+    prevY: 0,
+    init() { this.prevY = window.scrollY },
+    onScroll() {
+      const y    = window.scrollY
+      const diff = this.prevY - y
+      this.scale  = Math.min(2, Math.max(1, this.scale + diff / 300))
+      this.prevY  = y
+    }
+  }"
+            x-init="init()"
+            @scroll.window="onScroll()"
+            class="min-h-screen relative"
+    >
+        <h1
+                :style="`transform: translate(-50%, -50%) scale(${scale})`"
+                class="absolute top-1/2 left-1/2 text-6xl text-[#CC2027] origin-center transition-transform duration-200 ease-out"
+        >
+            Be the monster
+        </h1>
+    </div>
+</section>
+<section class="bg-black">
+    <div class="grid gap-2.5 pt-[295px] pb-[216px]">
+        <h2
+                x-data="{ visible: false }"
+                x-init="
+        new IntersectionObserver((entries) => {
+          visible = entries[0].isIntersecting
+        }, { threshold: 0.1 }).observe($el)
+      "
+                :class="visible ? 'opacity-100' : 'opacity-0'"
+                class="opacity-0 transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
+        >
+            From the quill of Mark Rein•Hagen,
+        </h2>
+
+        <h2
+                x-data="{ visible: false }"
+                x-init="
+        new IntersectionObserver((entries) => {
+          visible = entries[0].isIntersecting
+        }, { threshold: 0.1 }).observe($el)
+      "
+                :class="visible ? 'opacity-100' : 'opacity-0'"
+                class="opacity-0 transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
+        >
+            creator of Vampire: The Masquerade…
+        </h2>
+    </div>
+
+    <h1
+            x-data="{ visible: false }"
+            x-init="
+      new IntersectionObserver((entries) => {
+        visible = entries[0].isIntersecting
+      }, { threshold: 0.1 }).observe($el)
+    "
+            :class="visible ? 'opacity-100' : 'opacity-0'"
+            class="opacity-0 transition-opacity duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
+    >
+        …comes a new tale of gothic horror, medieval corruption, and monstrous power.
+    </h1>
+</section>
+<section class="h-[1433px] w-screen bg-[url('images/2.png')] bg-cover bg-center bg-no-repeat"></section>
+<section class="grid gap-20 bg-black pt-[106px] pb-[49px]">
+    <a name="contacts"></a>
+    <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#753106]">
+        <h2>
+            Become a FangKnight. Give us your email <br />
+            to not miss the Kickstarter.
+        </h2>
+    </div>
+    <div>
+        <form class="grid w-full max-w-[580px] justify-items-center gap-2.5 justify-self-center" action="">
+            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
+            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
+            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+
+            <button class="w-10/12 rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">bite me</button>
+        </form>
+    </div>
+</section>
+<section class="grid grid-cols-2 items-center justify-items-center bg-[#585041]">
+    <div class="">
+        <p class="text-2xl text-white">
+            You are the predator, the villain, <br />
+            the beast that lives forever and <br />
+            feeds on fear.
+        </p>
+        <p class="text-2xl text-white">A cursed knight.</p>
+        <p class="text-2xl text-white">An irredeemable monster.</p>
+        <p class="text-2xl text-white">A half-dead legend soaked in blood...</p>
+        <p class="text-2xl text-white">and full of hunger.</p>
+    </div>
+    <img src="images/3.png" width="705" alt="cover1" class="justify-self-end" />
+</section>
+<section
+        x-data="{
+    current: 0,
+    slides: [
+      {
+        header: 'You Are the Monster',
+        lines: [
+          'Be the vampire. The warlord. The oathbreaker.',
+          'Choose your legacy from Seven Bloodlines and Seven Covens, each a web of dark allegiances and bitter rivalries.',
+          'Embrace Hunger and Blight—and fight off the Fiend.'
+        ],
+        img: 'images/4.png'
+      },
+      {
+        header: 'Sword to the Firehold',
+        lines: [
+          'FangKnights are guardians of the maw, vampiric lords who stand sword-drawn atop the Fireholds, towering fortresses built less repel invaders, but to contain the nightmare rising from the Abysma below.',
+          ' Each Firehold is a last redoubt, its inner walls facing inward toward the hungry dark. Knaves patrol the halls, Firefolk serve in fear and awe, and all swear loyalty to their sworn bloodlords.',
+          ' Beneath the oath lies a knife—for each Firehold is torn by bitter rivalries among Bloodlines, Covens, and Malices.',
+          ' Within its shadowed halls, vampires rule, scheme, and feed, guarding the world from the Abysma below… for a price.',
+        ],
+        img: 'images/5.png'
+      },
+      {
+        header: 'A Gothic World of Vile Uncanny',
+        lines: [
+          ' Play out blood court trials to dungeon raids, political coups, and vampire duels. ',
+          ' Carve your story into the haunted world of Lostlorn, where Fireholds rise like teeth from the abyss, and every mask hides a threat. ',
+          ' Use the Crux20 System—a fast, intuitive d20 engine built for dramatic decisions and brutal consequences. ',
+        ],
+        img: 'images/6.png'
+      },
+      {
+        header: 'Dark Fantasy With A Bite',
+        lines: [
+          ' Tactical. Story-driven. Emotionally lethal. ',
+          ' Design your character in minutes. Master the system in play. ',
+          ' Cross-format: Works for tabletop, online, or LARP. ',
+          ' Compatible with 5e, but proudly its own creature. ',
+        ],
+        img: 'images/7.png'
+      }
+    ],
+    prev() {
+      this.current = this.current > 0
+        ? this.current - 1
+        : this.slides.length - 1
+    },
+    next() {
+      this.current = this.current < this.slides.length - 1
+        ? this.current + 1
+        : 0
+    }
+  }"
+        class="relative w-full overflow-hidden"
+>
+    <div
+            class="flex transition-transform duration-500 ease-in-out"
+            :style="`transform: translateX(-${current * 100}%)`"
+    >
+        <template x-for="(slide, i) in slides" :key="i">
+            <section class="grid grid-cols-2 grid-rows-2 items-center justify-items-center bg-[#E9C7AC] w-full flex-shrink-0">
+                <h2 class="text-[#CC2027] row-start-1 row-end-2 col-start-1 col-end-3 text-6xl text-center pt-[92px] pb-[101px]" x-text="slide.header"></h2>
+                <div class="space-y-2 px-6">
+                    <template x-for="(line, idx) in slide.lines" :key="idx" class="max-w-[513px] list-disc">
+                        <ul class="max-w-[513px] list-disc">
+                            <li class="text-2xl" x-text="line"></li>
+                        </ul>
+<!--                        <p class="text-2xl" x-text="line"></p>-->
+                    </template>
+                </div>
+                <img
+                        :src="slide.img"
+                        width="705"
+                        alt=""
+                        class="justify-self-end row-start-2 row-end-3 col-start-2 col-end-3"
+                />
+            </section>
+        </template>
+    </div>
+
+    <button
+            @click="prev()"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
+            aria-label="Previous slide"
+    >
+        &larr;
+    </button>
+    <button
+            @click="next()"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
+            aria-label="Next slide"
+    >
+        &rarr;
+    </button>
+</section>
+<section
+        x-data="{
+    imgVisible: false,
+    textVisible: false,
+    offset: 0,
+    top: 0,
+    height: 0,
+    init() {
+      this.top    = $el.offsetTop
+      this.height = $el.offsetHeight
+      this.imgVisible = true
+      setTimeout(() => this.textVisible = true, 1000)
+      window.addEventListener('scroll', () => {
+        let rel = window.scrollY - this.top
+        rel = Math.max(0, Math.min(rel, this.height))
+        this.offset = rel
+      })
+    }
+  }"
+        x-init="init()"
+        class="relative overflow-hidden h-[1331px]"
+>
+    <div
+            x-show="imgVisible"
+            x-transition.opacity.duration.1000ms
+            class="absolute inset-0 z-0 bg-[url('images/8.png')] bg-cover bg-center bg-no-repeat"
+    ></div>
+
+    <div
+            x-show="textVisible"
+            x-transition:enter.opacity.duration.800ms.delay.300ms
+            class="relative z-10 grid grid-cols-2 items-center h-full"
+            :style="`transform: translateY(-${offset * 0.2}px)`"
+    >
+        <div class="pl-[27px]">
+            <h2 class="text-white text-6xl pb-[185px]">Heroes die—</h2>
+            <h2 class="text-white text-6xl">Monsters endure</h2>
+        </div>
+        <p class="text-2xl text-white self-end pb-[76px]">
+            This isn’t about saving the day.<br />
+            This is about feeding in the dark.<br />
+            Making the world remember your name.<br />
+            And becoming what even demons fear.
+        </p>
+    </div>
+</section>
+<section class="bg-[#1F1914]">
+    <h2 class="text-[#CC2027] text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
+    <div class="grid grid-cols-2 items-center justify-items-center pb-[202px]">
+        <div class="max-w-[513px] list-disc">
+            <p class="text-2xl text-white pb-4.5">
+                Start playing in minutes. Learn as you go.
+            </p>
+            <p class="text-2xl text-white pb-[104px]">
+                Narrativist Old School Rules with no padding and no mercy.
+            </p>
+            <p class="text-2xl text-white">
+                <b>Crux20 System</b>—Elegant d20 rules married to dots-style progression
+            </p>
+            <p class="text-2xl text-white">
+                <b>Quick Start</b>—Be ready to battle in minutes
+            </p>
+            <p class="text-2xl text-white">
+                <b>Zone Combat</b>—Tactical and cinematic; deadly in simplicity
+            </p>
+            <p class="text-2xl text-white">
+                <b>Narrative-First</b>—Your story matters more than the numbers
+            </p>
+        </div>
+        <img src="images/9.png" alt="img2">
+    </div>
+</section>
+<section class="bg-[#1F1914]">
+    <a name="deliverMe"></a>
+    <div class="grid grid-cols-2 items-center justify-items-center pb-[202px]">
+        <div class="max-w-[513px]">
+            <h3 class="text-[#CC2027] text-5xl pb-5">Deliver me <br>
+                the free <br>
+                PDF preview </h3>
+            <form class="grid w-full max-w-[580px] justify-items-center gap-5 justify-self-center" action="">
+                <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
+                <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
+                <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+                <button class="w-full rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">bite me</button>
+            </form>
+        </div>
+        <img src="images/10.png" alt="img2">
+    </div>
+</section>
+<section class="relative">
+    <div
+            class="relative w-screen h-[1440px]
+           bg-[url('images/11.png')] bg-cover bg-no-repeat"
+    >
+        <div class="sticky top-0 h-screen
+             flex flex-col items-center
+             pt-[440px]"
+        >
+            <h3 class="text-4xl text-white">
+                Life is made of stories.<br> <br>
+                Become your own hero by crafting your own tales.<br> <br>
+                Be the storyteller, live your truth.
+            </h3>
+        </div>
+    </div>
+
+    <div class="sticky top-0 z-10 h-screen">
+        <div
+                class="w-full h-full bg-gray-200
+             [clip-path:polygon(0_25%,100%_0,100%_100%,0_65%)] top-[-500px] absolute
+             flex items-center justify-center px-8"
+        >
+            <h2 class="text-[#CC2027] text-8xl text-center leading-snug">
+                Rule the Night. <br>
+                Fear the Dawn.
+            </h2>
+        </div>
+        <div class="h-screen bg-black"></div>
+
+    </div>
+</section>
+<section>
+
+</section>
+
+</body>
+</html>
