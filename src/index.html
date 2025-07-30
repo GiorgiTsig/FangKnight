@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FangKnight</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/hvy8trx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hvy8trx.css">
     <link href="./output.css" rel="stylesheet" />
 </head>
-<body class="h-full"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
+<body class="h-full font-[eb-garamond]"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
 <section>
-    <div class="max-w-[1440px] justify-self-center h-[1142px] w-screen bg-[url('images/1.png')] bg-cover bg-center bg-no-repeat bg-fixed">
+    <div class="justify-self-center h-[1142px] w-screen bg-[url('images/1.png')] bg-cover bg-center bg-no-repeat bg-fixed">
         <div class="mx-auto max-w-[894px] pt-64 pb-[403px] text-center">
-            <h1 class="text-4xl font-bold text-white md:text-6xl">FangKnight</h1>
+            <h1 class="text-4xl font-[cormorant] font-normal text-white md:text-6xl">FangKnight</h1>
             <div class="mt-6 flex justify-center gap-4">
                 <a href="#deliverMe" >
                     <button class="bg-opacity-60 hover:bg-opacity-80 rounded-lg bg-black px-6 py-3 text-white underline cursor-pointer">Deliver Me!</button>
@@ -44,7 +46,7 @@
   }"
             x-init="init()"
             @scroll.window="onScroll()"
-            class="min-h-screen relative"
+            class="min-h-screen relative font-[cormorant]"
     >
         <h1
                 :style="`transform: translate(-50%, -50%) scale(${scale})`"
@@ -64,7 +66,7 @@
         }, { threshold: 0.1 }).observe($el)
       "
                 :class="visible ? 'opacity-100' : 'opacity-0'"
-                class="opacity-0 transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
+                class="opacity-0 font-[cormorant] transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
         >
             From the quill of Mark Rein•Hagen,
         </h2>
@@ -77,7 +79,7 @@
         }, { threshold: 0.1 }).observe($el)
       "
                 :class="visible ? 'opacity-100' : 'opacity-0'"
-                class="opacity-0 transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
+                class="opacity-0 font-[cormorant] transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
         >
             creator of Vampire: The Masquerade…
         </h2>
@@ -91,7 +93,7 @@
       }, { threshold: 0.1 }).observe($el)
     "
             :class="visible ? 'opacity-100' : 'opacity-0'"
-            class="opacity-0 transition-opacity duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
+            class="opacity-0 font-[cormorant] transition-opacity duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
     >
         …comes a new tale of gothic horror, medieval corruption, and monstrous power.
     </h1>
@@ -100,7 +102,7 @@
 <section class="grid gap-20 bg-black pt-[106px] pb-[49px]">
     <a name="contacts"></a>
     <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#753106]">
-        <h2>
+        <h2 class="font-[cormorant]">
             Become a FangKnight. Give us your email <br />
             to not miss the Kickstarter.
         </h2>
@@ -191,7 +193,7 @@
     >
         <template x-for="(slide, i) in slides" :key="i">
             <section class="grid grid-cols-2 grid-rows-2 items-center justify-items-center bg-[#E9C7AC] w-full flex-shrink-0">
-                <h2 class="text-[#CC2027] row-start-1 row-end-2 col-start-1 col-end-3 text-6xl text-center pt-[92px] pb-[101px]" x-text="slide.header"></h2>
+                <h2 class="text-[#CC2027] font-[cormorant] row-start-1 row-end-2 col-start-1 col-end-3 text-6xl text-center pt-[92px] pb-[101px]" x-text="slide.header"></h2>
                 <div class="space-y-2 px-6">
                     <template x-for="(line, idx) in slide.lines" :key="idx" class="max-w-[513px] list-disc">
                         <ul class="max-w-[513px] list-disc">
@@ -260,8 +262,8 @@
             :style="`transform: translateY(-${offset * 0.2}px)`"
     >
         <div class="pl-[27px]">
-            <h2 class="text-white text-6xl pb-[185px]">Heroes die—</h2>
-            <h2 class="text-white text-6xl">Monsters endure</h2>
+            <h2 class="text-white font-[cormorant] text-6xl pb-[185px]">Heroes die—</h2>
+            <h2 class="text-white font-[cormorant] text-6xl">Monsters endure</h2>
         </div>
         <p class="text-2xl text-white self-end pb-[76px]">
             This isn’t about saving the day.<br />
@@ -272,7 +274,7 @@
     </div>
 </section>
 <section class="bg-[#1F1914]">
-    <h2 class="text-[#CC2027] text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
+    <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
     <div class="grid grid-cols-2 items-center justify-items-center pb-[202px]">
         <div class="max-w-[513px] list-disc">
             <p class="text-2xl text-white pb-4.5">
@@ -314,11 +316,10 @@
         <img src="images/10.png" alt="img2">
     </div>
 </section>
-<section class="relative">
-    <div
-            class="relative w-screen h-[1440px]
-           bg-[url('images/11.png')] bg-cover bg-no-repeat"
-    >
+<section class="relative overflow-x-hidden">
+
+    <div class="fixed inset-0 z-[-1] pointer-events-none
+              bg-[url('images/11.png')] bg-fixed bg-cover">
         <div class="sticky top-0 h-screen
              flex flex-col items-center
              pt-[440px]"
@@ -331,24 +332,67 @@
         </div>
     </div>
 
-    <div class="sticky top-0 z-10 h-screen">
-        <div
-                class="w-full h-full bg-gray-200
-             [clip-path:polygon(0_25%,100%_0,100%_100%,0_65%)] top-[-500px] absolute
-             flex items-center justify-center px-8"
-        >
-            <h2 class="text-[#CC2027] text-8xl text-center leading-snug">
-                Rule the Night. <br>
-                Fear the Dawn.
+    <div class="h-[1440px]"></div>
+
+    <div class="h-screen sticky top-0">
+
+        <div class="absolute inset-0 z-10 bg-black pointer-events-none
+              [clip-path:polygon(-50%_0%,0%_100%,100%_100%)]"></div>
+
+
+        <div class="absolute inset-0 z-20 flex items-center justify-center
+                bg-gray-200
+                [clip-path:polygon(0%_25%,100%_0%,100%_100%,0%_75%)] px-8">
+            <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center leading-snug">
+                Rule the Night.<br/>Fear the Dawn.
             </h2>
         </div>
-        <div class="h-screen bg-black"></div>
+    </div>
 
+    <div class="h-screen bg-black"></div>
+</section>
+<section class="bg-black">
+    <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center">Future games of the Ammortal</h2>
+    <div class="flex items-center flex-col gap-6 justify-center pb-[202px]">
+        <p class="text-white p-20  text-xl">
+            <b>Lostlorn </b> is more than a series of games, it is a series of games that lets you play the monster.
+        </p>
+        <p class="text-white text-xl">
+            <b>BADLANDER™ </b>— Honor & Glory — A Fury of Thorns: The Saga of the Hunter Blade.
+        </p>
+        <p class="text-white text-xl">
+            <b>BEASTKNIGHT™ </b> Oak & Moon —A Pact of Claws: The Saga of the WereBorn Wolf.
+        </p>
+        <p class="text-white text-xl">
+            <b>WITCHKNIGHT™ </b> Riddle & Rubric — A Braid of Twines: The Saga of the Magus Weaver.
+        </p>
+        <p class="text-white text-xl">
+            <b>GHASTKNIGHT™ </b> Blight & Doom — An Echo of Curses: The Saga of the Ghostly Wraiths.
+        </p>
+        <p class="text-white text-xl">
+            <b>SYLPHKNIGHT™ </b>  Dreams & Fables — A Lark of Wisps: The Saga of the Faerie Whisper.
+        </p>
+        <p class="text-white text-xl">
+            <b>VILEKNIGHT™ </b> Dragon & Dæmon — A Ravage of Tusks: The Saga of the Draakon Imp.
+        </p>
+        <p class="text-white text-xl pt-12">
+            FANGKNIGHT is a roleplaying game of gothic horror, treachery, and
+            cursed nobility. <br> It can be played straight from the book, used to seed
+            your own sinister world, or carved apart <br> into pieces and rewoven
+            into your existing campaigns. The rules blend ritual simplicity with <br>
+            baroque depth—feasting on fantasy while bleeding it dry.
+        </p>
+    </div>
+    <div class="flex flex-col gap-8 justify-center items-center">
+        <h3 class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#753106]">Become a FangKnight. <br> Join in the ranks.</h3>
+        <form class="grid w-full max-w-[480px] justify-items-center gap-5 justify-self-center" action="">
+            <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
+            <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
+            <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+            <button class="w-full rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">bite me</button>
+        </form>
+        <img src="images/12.png" width="338" alt="cover1" class="justify-self-end" />
     </div>
 </section>
-<section>
-
-</section>
-
 </body>
 </html>
