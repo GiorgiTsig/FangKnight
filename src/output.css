@@ -26,7 +26,6 @@
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-bold: 700;
-    --leading-tight: 1.25;
     --leading-snug: 1.375;
     --radius-lg: 0.5rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -252,6 +251,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-\[150\%\] {
+    height: 150%;
+  }
   .h-\[1142px\] {
     height: 1142px;
   }
@@ -260,6 +262,12 @@
   }
   .h-\[1440px\] {
     height: 1440px;
+  }
+  .h-\[1500px\] {
+    height: 1500px;
+  }
+  .h-\[2000px\] {
+    height: 2000px;
   }
   .h-auto {
     height: auto;
@@ -421,9 +429,6 @@
   }
   .bg-\[url\(\'images\/2\.jpg\'\)\] {
     background-image: url('images/2.jpg');
-  }
-  .bg-\[url\(\'images\/2\.png\'\)\] {
-    background-image: url('images/2.png');
   }
   .bg-\[url\(\'images\/8\.png\'\)\] {
     background-image: url('images/8.png');
