@@ -11,9 +11,9 @@
 </head>
 <body class="h-full font-[eb-garamond]"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
 <section>
-    <div class="justify-self-center h-[1142px] w-screen bg-[url('images/1.png')] bg-cover bg-center bg-no-repeat bg-fixed">
+    <div class="justify-self-center h-[1142px] w-full bg-[url('images/1.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed">
         <div class="mx-auto max-w-[894px] pt-64 pb-[403px] text-center">
-            <h1 class="text-4xl font-[cormorant] font-normal text-white md:text-6xl">FangKnight</h1>
+            <img src="images/13.png" />
             <div class="mt-6 flex justify-center gap-4">
                 <a href="#deliverMe" >
                     <button class="bg-opacity-60 hover:bg-opacity-80 rounded-lg bg-black px-6 py-3 text-white underline cursor-pointer">Deliver Me!</button>
@@ -21,12 +21,11 @@
                 <a href="#contacts">
                     <button
                             class="rounded-lg bg-black bg-opacity-60 hover:bg-opacity-80 px-6 py-3 text-white underline transition-transform duration-300 ease-in-out z-50"
-                            :class="scrolled ? 'fixed  top-[4%] translate-x-[calc(35vw_-_2rem)]  opacity-60 z-50' : 'bg-opacity-60'"
+                            :class="scrolled ? 'fixed  top-[4%] translate-x-[calc(15vw_-_2rem)] md:translate-x-[calc(35vw_-_2rem)]  opacity-60 z-50' : 'bg-opacity-60'"
                     >
-                        Bite Me!
+                        Bite Me!!
                     </button>
                 </a>
-
             </div>
         </div>
     </div>
@@ -93,139 +92,271 @@
       }, { threshold: 0.1 }).observe($el)
     "
             :class="visible ? 'opacity-100' : 'opacity-0'"
-            class="opacity-0 font-[cormorant] transition-opacity duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
+            class="opacity-0 font-[cormorant] transition-opacity pt-[295px] duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
     >
         …comes a new tale of gothic horror, medieval corruption, and monstrous power.
     </h1>
 </section>
-<section class="h-[1433px] w-screen bg-[url('images/2.png')] bg-cover bg-center bg-no-repeat"></section>
-<section class="grid gap-20 bg-black pt-[106px] pb-[49px]">
+<section class="justify-self-center h-[1142px] w-full bg-black bg-[url('images/2.png')] bg-cover bg-center bg-no-repeat"></section>
+<section class="grid gap-20 bg-black pt-[106px] pb-[100px]">
     <a name="contacts"></a>
-    <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#753106]">
+    <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">
         <h2 class="font-[cormorant]">
-            Become a FangKnight. Give us your email <br />
+            Become a FangKnight. <br> Give us your email <br />
             to not miss the Kickstarter.
         </h2>
     </div>
     <div>
-        <form class="grid w-full max-w-[580px] justify-items-center gap-2.5 justify-self-center" action="">
+        <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" action="">
             <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
             <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
             <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
 
-            <button class="w-10/12 rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">bite me</button>
+            <button class="md:w-10/12 rounded-[8px] px-[114px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
         </form>
     </div>
 </section>
-<section class="grid grid-cols-2 items-center justify-items-center bg-[#585041]">
+<section class="grid grid-cols-2 items-center justify-items-center bg-[#773B3D]">
     <div class="">
-        <p class="text-2xl text-white">
+        <p class="text-2xl text-white font-bold">
             You are the predator, the villain, <br />
             the beast that lives forever and <br />
             feeds on fear.
         </p>
-        <p class="text-2xl text-white">A cursed knight.</p>
-        <p class="text-2xl text-white">An irredeemable monster.</p>
-        <p class="text-2xl text-white">A half-dead legend soaked in blood...</p>
-        <p class="text-2xl text-white">and full of hunger.</p>
+        <p class="text-2xl text-white font-bold">A cursed knight.</p>
+        <p class="text-2xl text-white font-bold">An irredeemable monster.</p>
+        <p class="text-2xl text-white font-bold">A half-dead legend soaked in blood...</p>
+        <p class="text-2xl text-white font-bold">and full of hunger.</p>
     </div>
     <img src="images/3.png" width="705" alt="cover1" class="justify-self-end" />
 </section>
 <section
         x-data="{
     current: 0,
-    slides: [
-      {
-        header: 'You Are the Monster',
-        lines: [
-          'Be the vampire. The warlord. The oathbreaker.',
-          'Choose your legacy from Seven Bloodlines and Seven Covens, each a web of dark allegiances and bitter rivalries.',
-          'Embrace Hunger and Blight—and fight off the Fiend.'
-        ],
-        img: 'images/4.png'
-      },
-      {
-        header: 'Sword to the Firehold',
-        lines: [
-          'FangKnights are guardians of the maw, vampiric lords who stand sword-drawn atop the Fireholds, towering fortresses built less repel invaders, but to contain the nightmare rising from the Abysma below.',
-          ' Each Firehold is a last redoubt, its inner walls facing inward toward the hungry dark. Knaves patrol the halls, Firefolk serve in fear and awe, and all swear loyalty to their sworn bloodlords.',
-          ' Beneath the oath lies a knife—for each Firehold is torn by bitter rivalries among Bloodlines, Covens, and Malices.',
-          ' Within its shadowed halls, vampires rule, scheme, and feed, guarding the world from the Abysma below… for a price.',
-        ],
-        img: 'images/5.png'
-      },
-      {
-        header: 'A Gothic World of Vile Uncanny',
-        lines: [
-          ' Play out blood court trials to dungeon raids, political coups, and vampire duels. ',
-          ' Carve your story into the haunted world of Lostlorn, where Fireholds rise like teeth from the abyss, and every mask hides a threat. ',
-          ' Use the Crux20 System—a fast, intuitive d20 engine built for dramatic decisions and brutal consequences. ',
-        ],
-        img: 'images/6.png'
-      },
-      {
-        header: 'Dark Fantasy With A Bite',
-        lines: [
-          ' Tactical. Story-driven. Emotionally lethal. ',
-          ' Design your character in minutes. Master the system in play. ',
-          ' Cross-format: Works for tabletop, online, or LARP. ',
-          ' Compatible with 5e, but proudly its own creature. ',
-        ],
-        img: 'images/7.png'
-      }
+    items: [
+      'Be the vampire. The warlord. The oathbreaker.',
+      'Choose your legacy from Seven Bloodlines and Seven Covens, each a web of dark allegiances and bitter rivalries.',
+      'Embrace Hunger and Blight—and fight off the Fiend.'
     ],
-    prev() {
-      this.current = this.current > 0
-        ? this.current - 1
-        : this.slides.length - 1
-    },
-    next() {
-      this.current = this.current < this.slides.length - 1
-        ? this.current + 1
-        : 0
-    }
+    prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
+    next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
   }"
-        class="relative w-full overflow-hidden"
+        class="bg-[#E9C7AC] py-16"
 >
-    <div
-            class="flex transition-transform duration-500 ease-in-out"
-            :style="`transform: translateX(-${current * 100}%)`"
-    >
-        <template x-for="(slide, i) in slides" :key="i">
-            <section class="grid grid-cols-2 grid-rows-2 items-center justify-items-center bg-[#E9C7AC] w-full flex-shrink-0">
-                <h2 class="text-[#CC2027] font-[cormorant] row-start-1 row-end-2 col-start-1 col-end-3 text-6xl text-center pt-[92px] pb-[101px]" x-text="slide.header"></h2>
-                <div class="space-y-2 px-6">
-                    <template x-for="(line, idx) in slide.lines" :key="idx" class="max-w-[513px] list-disc">
-                        <ul class="max-w-[513px] list-disc">
-                            <li class="text-2xl" x-text="line"></li>
-                        </ul>
-<!--                        <p class="text-2xl" x-text="line"></p>-->
-                    </template>
-                </div>
-                <img
-                        :src="slide.img"
-                        width="705"
-                        alt=""
-                        class="justify-self-end row-start-2 row-end-3 col-start-2 col-end-3"
-                />
-            </section>
-        </template>
-    </div>
+    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+        You Are the Monster
+    </h2>
 
-    <button
-            @click="prev()"
-            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
-            aria-label="Previous slide"
-    >
-        &larr;
-    </button>
-    <button
-            @click="next()"
-            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
-            aria-label="Next slide"
-    >
-        &rarr;
-    </button>
+    <div class="flex items-center justify-center space-x-8">
+        <button
+                @click="prev()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Previous"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="overflow-hidden w-[513px]">
+            <ul
+                    class="flex transition-transform duration-500 ease-in-out"
+                    :style="`transform: translateX(-${current * 100}%)`"
+            >
+                <template x-for="(txt, i) in items" :key="i">
+                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                        <span x-text="txt"></span>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <button
+                @click="next()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Next"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <div class="mt-12 flex justify-center">
+            <img src="images/4.png" alt="img2" class="max-w-full h-auto" />
+        </div>
+    </div>
+</section>
+<section
+        x-data="{
+    current: 0,
+    items: [
+      'FangKnights are guardians of the maw, vampiric lords who stand sword-drawn atop the Fireholds towering fortresses built less repel invaders, but to contain the nightmare rising from the Abysma below',
+      'Each Firehold is a last redoubt, its inner walls facing inward toward the hungry dark. Knaves patrol the halls, Firefolk serve in fear and awe, and all swear loyalty to their sworn bloodlords.',
+      'Beneath the oath lies a knife—for each Firehold is torn by bitter rivalries among Bloodlines, Covens, and Malices.',
+      'Within its shadowed halls, vampires rule, scheme, and feed, guarding the world from the Abysma below… for a price.'
+    ],
+    prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
+    next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
+  }"
+        class="bg-[#E9C7AC] py-16"
+>
+    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+        Sword to the Firehold
+    </h2>
+
+    <div class="flex items-center justify-center space-x-8">
+        <button
+                @click="prev()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Previous"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="overflow-hidden w-[513px]">
+            <ul
+                    class="flex transition-transform duration-500 ease-in-out"
+                    :style="`transform: translateX(-${current * 100}%)`"
+            >
+                <template x-for="(txt, i) in items" :key="i">
+                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                        <span x-text="txt"></span>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <button
+                @click="next()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Next"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <div class="mt-12 flex justify-center">
+            <img src="images/5.png" alt="img2" class="max-w-full h-auto" />
+        </div>
+    </div>
+</section>
+<section
+        x-data="{
+    current: 0,
+    items: [
+        'Play out blood court trials to dungeon raids, political coups, and vampire duels.',
+        'Carve your story into the haunted world of Lostlorn, where Fireholds rise like teeth from the abyss, and every mask hides a threat.',
+        'Use the Crux20 System—a fast, intuitive d20 engine built for dramatic decisions and brutal consequences.'
+
+    ],
+    prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
+    next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
+  }"
+        class="bg-[#E9C7AC] py-16"
+>
+    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+        A Gothic World of Vile Uncanny
+    </h2>
+
+    <div class="flex items-center justify-center space-x-8">
+        <button
+                @click="prev()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Previous"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="overflow-hidden w-[513px]">
+            <ul
+                    class="flex transition-transform duration-500 ease-in-out"
+                    :style="`transform: translateX(-${current * 100}%)`"
+            >
+                <template x-for="(txt, i) in items" :key="i">
+                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                        <span x-text="txt"></span>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <button
+                @click="next()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Next"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <div class="mt-12 flex justify-center">
+            <img src="images/6.png" alt="img2" class="max-w-full h-auto" />
+        </div>
+    </div>
+</section>
+<section
+        x-data="{
+    current: 0,
+    items: [
+        'Tactical. Story-driven. Emotionally lethal.',
+        'Design your character in minutes. Master the system in play.',
+        'Cross-format: Works for tabletop, online, or LARP.',
+        'Compatible with 5e, but proudly its own creature.'
+
+    ],
+    prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
+    next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
+  }"
+        class="bg-[#E9C7AC] py-16"
+>
+    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+        Dark Fantasy With A Bite
+    </h2>
+
+    <div class="flex items-center justify-center space-x-8">
+        <button
+                @click="prev()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Previous"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="overflow-hidden w-[513px]">
+            <ul
+                    class="flex transition-transform duration-500 ease-in-out"
+                    :style="`transform: translateX(-${current * 100}%)`"
+            >
+                <template x-for="(txt, i) in items" :key="i">
+                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                        <span x-text="txt"></span>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <button
+                @click="next()"
+                class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
+                aria-label="Next"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <div class="mt-12 flex justify-center">
+            <img src="images/7.png" alt="img2" class="max-w-full h-auto" />
+        </div>
+    </div>
 </section>
 <section
         x-data="{
@@ -275,7 +406,7 @@
 </section>
 <section class="bg-[#1F1914]">
     <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
-    <div class="grid grid-cols-2 items-center justify-items-center pb-[202px]">
+    <div class="grid grid-cols-2 items-center justify-items-center pb-[50px]">
         <div class="max-w-[513px] list-disc">
             <p class="text-2xl text-white pb-4.5">
                 Start playing in minutes. Learn as you go.
@@ -301,7 +432,7 @@
 </section>
 <section class="bg-[#1F1914]">
     <a name="deliverMe"></a>
-    <div class="grid grid-cols-2 items-center justify-items-center pb-[202px]">
+    <div class="grid grid-cols-2 items-center justify-items-center pb-[50px]">
         <div class="max-w-[513px]">
             <h3 class="text-[#CC2027] text-5xl pb-5">Deliver me <br>
                 the free <br>
@@ -310,7 +441,7 @@
                 <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
                 <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
                 <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
-                <button class="w-full rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">bite me</button>
+                <button class="w-full rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
             </form>
         </div>
         <img src="images/10.png" alt="img2">
@@ -351,7 +482,7 @@
 
     <div class="h-screen bg-black"></div>
 </section>
-<section class="bg-black">
+<section class="bg-[#020001]">
     <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center">Future games of the Ammortal</h2>
     <div class="flex items-center flex-col gap-6 justify-center pb-[202px]">
         <p class="text-white p-20  text-xl">
@@ -384,12 +515,13 @@
         </p>
     </div>
     <div class="flex flex-col gap-8 justify-center items-center">
-        <h3 class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#753106]">Become a FangKnight. <br> Join in the ranks.</h3>
-        <form class="grid w-full max-w-[480px] justify-items-center gap-5 justify-self-center" action="">
-            <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
-            <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
-            <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
-            <button class="w-full rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">bite me</button>
+        <h3 class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">Become a FangKnight. <br> Join in the ranks.</h3>
+        <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" action="">
+            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
+            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
+            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+
+            <button class="md:w-10/12 rounded-[8px] px-[114px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
         </form>
         <img src="images/12.png" width="338" alt="cover1" class="justify-self-end" />
     </div>
