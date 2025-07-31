@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-black: #000;
     --color-white: #fff;
@@ -26,7 +25,6 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-tight: 1.25;
     --leading-snug: 1.375;
@@ -212,17 +210,11 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .top-\[2\%\] {
-    top: 2%;
-  }
   .top-\[4\%\] {
     top: 4%;
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
-  }
-  .-z-10 {
-    z-index: calc(10 * -1);
   }
   .z-0 {
     z-index: 0;
@@ -260,9 +252,6 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
-  .h-\[120vh\] {
-    height: 120vh;
-  }
   .h-\[1142px\] {
     height: 1142px;
   }
@@ -287,17 +276,8 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
-  .w-10\/8 {
-    width: calc(10/8 * 100%);
-  }
-  .w-10\/11 {
-    width: calc(10/11 * 100%);
-  }
   .w-10\/12 {
     width: calc(10/12 * 100%);
-  }
-  .w-11\/12 {
-    width: calc(11/12 * 100%);
   }
   .w-\[513px\] {
     width: 513px;
@@ -305,14 +285,8 @@
   .w-full {
     width: 100%;
   }
-  .w-screen {
-    width: 100vw;
-  }
   .max-w-\[324px\] {
     max-width: 324px;
-  }
-  .max-w-\[480px\] {
-    max-width: 480px;
   }
   .max-w-\[513px\] {
     max-width: 513px;
@@ -340,10 +314,6 @@
   }
   .translate-x-\[calc\(15vw_-_2rem\)\] {
     --tw-translate-x: calc(15vw - 2rem);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[calc\(35vw_-_2rem\)\] {
-    --tw-translate-x: calc(35vw - 2rem);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
@@ -449,8 +419,8 @@
   .bg-\[url\(\'images\/1\.jpeg\'\)\] {
     background-image: url('images/1.jpeg');
   }
-  .bg-\[url\(\'images\/2\.jpeg\'\)\] {
-    background-image: url('images/2.jpeg');
+  .bg-\[url\(\'images\/2\.jpg\'\)\] {
+    background-image: url('images/2.jpg');
   }
   .bg-\[url\(\'images\/2\.png\'\)\] {
     background-image: url('images/2.png');
@@ -488,23 +458,8 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
-  .px-\[107px\] {
-    padding-inline: 107px;
-  }
-  .px-\[108px\] {
-    padding-inline: 108px;
-  }
-  .px-\[109px\] {
-    padding-inline: 109px;
-  }
-  .px-\[110px\] {
-    padding-inline: 110px;
-  }
   .px-\[114px\] {
     padding-inline: 114px;
-  }
-  .px-\[115px\] {
-    padding-inline: 115px;
   }
   .px-\[214px\] {
     padding-inline: 214px;
@@ -619,10 +574,6 @@
     --tw-leading: var(--leading-snug);
     line-height: var(--leading-snug);
   }
-  .leading-tight {
-    --tw-leading: var(--leading-tight);
-    line-height: var(--leading-tight);
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -648,11 +599,6 @@
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-colors {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
@@ -698,12 +644,6 @@
   }
   .\[clip-path\:polygon\(0\%_25\%\,100\%_0\%\,100\%_100\%\,0\%_75\%\)\] {
     clip-path: polygon(0% 25%,100% 0%,100% 100%,0% 75%);
-  }
-  .\[clip-path\:polygon\(0_0\,100\%_30\%\,100\%_100\%\,0_70\%\)\] {
-    clip-path: polygon(0 0,100% 30%,100% 100%,0 70%);
-  }
-  .\[clip-path\:polygon\(0_20\%\,100\%_0\,100\%_100\%\,0_80\%\)\] {
-    clip-path: polygon(0 20%,100% 0,100% 100%,0 80%);
   }
   .hover\:bg-\[\#CC2027\] {
     &:hover {
