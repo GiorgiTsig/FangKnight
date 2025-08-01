@@ -11,6 +11,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
@@ -263,12 +265,6 @@
   .h-\[1440px\] {
     height: 1440px;
   }
-  .h-\[1500px\] {
-    height: 1500px;
-  }
-  .h-\[2000px\] {
-    height: 2000px;
-  }
   .h-auto {
     height: auto;
   }
@@ -323,6 +319,9 @@
   .translate-x-\[calc\(15vw_-_2rem\)\] {
     --tw-translate-x: calc(15vw - 2rem);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .\[transform\:translateZ\(0\)\] {
+    transform: translateZ(0);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -644,11 +643,14 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
-  .\[clip-path\:polygon\(-50\%_0\%\,0\%_100\%\,100\%_100\%\)\] {
-    clip-path: polygon(-50% 0%,0% 100%,100% 100%);
+  .\[backface-visibility\:hidden\] {
+    backface-visibility: hidden;
   }
-  .\[clip-path\:polygon\(0\%_25\%\,100\%_0\%\,100\%_100\%\,0\%_75\%\)\] {
-    clip-path: polygon(0% 25%,100% 0%,100% 100%,0% 75%);
+  .\[clip-path\:polygon\(-50\%_0\%\,0\%_101\%\,100\%_101\%\)\] {
+    clip-path: polygon(-50% 0%,0% 101%,100% 101%);
+  }
+  .\[clip-path\:polygon\(0\%_24\%\,100\%_-1\%\,100\%_100\%\,0\%_76\%\)\] {
+    clip-path: polygon(0% 24%,100% -1%,100% 100%,0% 76%);
   }
   .hover\:bg-\[\#CC2027\] {
     &:hover {

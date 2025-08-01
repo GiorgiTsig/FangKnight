@@ -452,12 +452,11 @@
     <div class="fixed inset-0 z-[-1] pointer-events-none
               bg-[url('images/11.png')] bg-fixed bg-cover">
         <div class="sticky top-0 h-screen
-             flex flex-col items-center
-             pt-[440px]"
-        >
-            <h3 class="text-4xl text-white">
-                Life is made of stories.<br> <br>
-                Become your own hero by crafting your own tales.<br> <br>
+                flex flex-col items-center
+                pt-[440px]">
+            <h3 class="text-4xl text-white text-center leading-snug">
+                Life is made of stories.<br><br>
+                Become your own hero by crafting your own tales.<br><br>
                 Be the storyteller, live your truth.
             </h3>
         </div>
@@ -466,21 +465,24 @@
     <div class="h-[1440px]"></div>
 
     <div class="h-screen sticky top-0">
-
         <div class="absolute inset-0 z-10 bg-black pointer-events-none
-              [clip-path:polygon(-50%_0%,0%_100%,100%_100%)]"></div>
-
+                [clip-path:polygon(-50%_0%,0%_101%,100%_101%)]
+                [backface-visibility:hidden]
+                [transform:translateZ(0)]">
+        </div>
 
         <div class="absolute inset-0 z-20 flex items-center justify-center
-                bg-gray-200
-                [clip-path:polygon(0%_25%,100%_0%,100%_100%,0%_75%)] px-8">
+                bg-gray-200 pointer-events-none
+                [clip-path:polygon(0%_24%,100%_-1%,100%_100%,0%_76%)]
+                [backface-visibility:hidden]
+                [transform:translateZ(0)] px-8">
             <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center leading-snug">
                 Rule the Night.<br/>Fear the Dawn.
             </h2>
         </div>
     </div>
 
-    <div class="h-screen bg-black"></div>
+    <div class="h-screen bg-[#020001]"></div>
 </section>
 <section class="bg-[#020001]">
     <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center">Future games of the Ammortal</h2>
