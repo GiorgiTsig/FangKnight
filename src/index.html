@@ -11,8 +11,8 @@
 </head>
 <body class="h-full font-[eb-garamond]"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
 <section>
-    <div class="justify-self-center h-[1142px] w-full bg-[url('images/1.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed">
-        <div class="mx-auto max-w-[894px] pt-64 pb-[403px] text-center">
+    <div class="justify-self-center h-[732px] md:h-[1142px] w-full bg-[url('images/1.jpeg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
+        <div class="mx-auto max-w-[894px] pt-56  md:pt-64 text-center">
             <img src="images/13.png" />
             <div class="mt-6 flex justify-center gap-4">
                 <a href="#deliverMe" >
@@ -55,7 +55,7 @@
         </h1>
     </div>
 </section>
-<section class="bg-black">
+<section class="bg-black grid gap-[400px]">
     <div class="grid gap-2.5 pt-[295px] pb-[216px]">
         <h2
                 x-data="{ visible: false }"
@@ -97,8 +97,8 @@
         …comes a new tale of gothic horror, medieval corruption, and monstrous power.
     </h1>
 </section>
-<section class="justify-self-center h-[150%] w-full bg-black bg-[url('images/2.jpg')] bg-cover bg-center bg-no-repeat"></section>
-<section class="grid gap-20 bg-black pt-[106px] pb-[100px]">
+<section class="justify-self-center h-[94%] w-full bg-black bg-[url('images/2.jpg')] bg-cover bg-center bg-no-repeat"></section>
+<section class="grid gap-20  justify-center bg-black pt-[106px] pb-[100px]">
     <a name="contacts"></a>
     <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">
         <h2 class="font-[cormorant]">
@@ -106,27 +106,27 @@
             to not miss the Kickstarter.
         </h2>
     </div>
-    <div>
-        <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" action="">
-            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
-            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
-            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+    <div class="justify-self-center">
+        <form class="grid w-full md:max-w-[580px] max-w-[324px] gap-6" action="">
+            <input class="rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
+            <input class="rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
+            <input class="rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
 
-            <button class="md:w-10/12 rounded-[8px] px-[114px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
+            <button class="rounded-[8px] px-[114px] bg-[#2C2C2C] py-[12px] text-white" type="submit">Bite Me!</button>
         </form>
     </div>
 </section>
-<section class="grid grid-cols-2 items-center justify-items-center bg-[#773B3D]">
+<section class="grid grid-cols-2 items-center justify-items-center bg-[#2C2C2C] md:bg-[#773B3D]">
     <div class="">
-        <p class="text-2xl text-white font-bold">
+        <p class="md:text-2xl text-xs text-white">
             You are the predator, the villain, <br />
             the beast that lives forever and <br />
             feeds on fear.
         </p>
-        <p class="text-2xl text-white font-bold">A cursed knight.</p>
-        <p class="text-2xl text-white font-bold">An irredeemable monster.</p>
-        <p class="text-2xl text-white font-bold">A half-dead legend soaked in blood...</p>
-        <p class="text-2xl text-white font-bold">and full of hunger.</p>
+        <p class="md:text-2xl text-xs text-white">A cursed knight.</p>
+        <p class="md:text-2xl text-xs text-white">An irredeemable monster.</p>
+        <p class="md:text-2xl text-xs text-white">A half-dead legend soaked in blood...</p>
+        <p class="md:text-2xl text-xs text-white">and full of hunger.</p>
     </div>
     <img src="images/3.png" width="705" alt="cover1" class="justify-self-end" />
 </section>
@@ -141,13 +141,13 @@
     prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
     next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
   }"
-        class="bg-[#E9C7AC] py-16"
+        class="bg-[#E9C7AC] pt-16"
 >
     <h2 class="text-[#CC2027] text-6xl text-center mb-12">
         You Are the Monster
     </h2>
 
-    <div class="flex items-center justify-center space-x-8">
+    <div class="flex flex-col-reverse md:flex-row items-center gap-2 justify-center md:space-x-8">
         <button
                 @click="prev()"
                 class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
@@ -158,13 +158,13 @@
             </svg>
         </button>
 
-        <div class="overflow-hidden w-[513px]">
+        <div class="overflow-hidden max-w-[359px]  md:max-w-[513px]">
             <ul
-                    class="flex transition-transform duration-500 ease-in-out"
+                    class="flex transition-transform duration-500 ease-in-out items-center"
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -181,7 +181,7 @@
             </svg>
         </button>
 
-        <div class="mt-12 flex justify-center">
+        <div class=" flex justify-center">
             <img src="images/4.png" alt="img2" class="max-w-full h-auto" />
         </div>
     </div>
@@ -198,13 +198,13 @@
     prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
     next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
   }"
-        class="bg-[#E9C7AC] py-16"
+        class="bg-[#E9C7AC] pt-16"
 >
     <h2 class="text-[#CC2027] text-6xl text-center mb-12">
         Sword to the Firehold
     </h2>
 
-    <div class="flex items-center justify-center space-x-8">
+    <div class="flex flex-col-reverse md:flex-row items-center gap-2 justify-center md:space-x-8">
         <button
                 @click="prev()"
                 class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
@@ -215,13 +215,13 @@
             </svg>
         </button>
 
-        <div class="overflow-hidden w-[513px]">
+        <div class="overflow-hidden max-w-[359px]  md:max-w-[513px]">
             <ul
                     class="flex transition-transform duration-500 ease-in-out"
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -238,7 +238,7 @@
             </svg>
         </button>
 
-        <div class="mt-12 flex justify-center">
+        <div class=" flex justify-center">
             <img src="images/5.png" alt="img2" class="max-w-full h-auto" />
         </div>
     </div>
@@ -255,13 +255,13 @@
     prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
     next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
   }"
-        class="bg-[#E9C7AC] py-16"
+        class="bg-[#E9C7AC] pt-16"
 >
     <h2 class="text-[#CC2027] text-6xl text-center mb-12">
         A Gothic World of Vile Uncanny
     </h2>
 
-    <div class="flex items-center justify-center space-x-8">
+    <div class="flex flex-col-reverse md:flex-row items-center gap-2 justify-center md:space-x-8">
         <button
                 @click="prev()"
                 class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
@@ -272,13 +272,13 @@
             </svg>
         </button>
 
-        <div class="overflow-hidden w-[513px]">
+        <div class="overflow-hidden max-w-[359px]  md:max-w-[513px]">
             <ul
                     class="flex transition-transform duration-500 ease-in-out"
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -295,7 +295,7 @@
             </svg>
         </button>
 
-        <div class="mt-12 flex justify-center">
+        <div class=" flex justify-center">
             <img src="images/6.png" alt="img2" class="max-w-full h-auto" />
         </div>
     </div>
@@ -313,13 +313,13 @@
     prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
     next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
   }"
-        class="bg-[#E9C7AC] py-16"
+        class="bg-[#E9C7AC] pt-16 pb-2"
 >
     <h2 class="text-[#CC2027] text-6xl text-center mb-12">
         Dark Fantasy With A Bite
     </h2>
 
-    <div class="flex items-center justify-center space-x-8">
+    <div class="flex flex-col-reverse md:flex-row items-center gap-2 justify-center md:space-x-8">
         <button
                 @click="prev()"
                 class="p-3 rounded-full bg-white shadow-lg hover:bg-[#CC2027] hover:text-white transition-colors"
@@ -330,13 +330,13 @@
             </svg>
         </button>
 
-        <div class="overflow-hidden w-[513px]">
+        <div class="overflow-hidden max-w-[359px]  md:max-w-[513px]">
             <ul
                     class="flex transition-transform duration-500 ease-in-out"
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 w-[513px] text-2xl px-6">
+                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -353,7 +353,7 @@
             </svg>
         </button>
 
-        <div class="mt-12 flex justify-center">
+        <div class=" flex justify-center">
             <img src="images/7.png" alt="img2" class="max-w-full h-auto" />
         </div>
     </div>
@@ -404,10 +404,10 @@
         </p>
     </div>
 </section>
-<section class="bg-[#1F1914]">
+<section class="md:bg-[#1F1914] bg-[#000000]">
     <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
-    <div class="grid grid-cols-2 items-center justify-items-center pb-[50px]">
-        <div class="max-w-[513px] list-disc">
+    <div class="grid md:grid-cols-2 gap-2 p-5 md:gap-0 items-center justify-items-center md:pb-[50px]">
+        <div class="max-w-[513px]">
             <p class="text-2xl text-white pb-4.5">
                 Start playing in minutes. Learn as you go.
             </p>
@@ -427,36 +427,34 @@
                 <b>Narrative-First</b>—Your story matters more than the numbers
             </p>
         </div>
-        <img src="images/9.png" alt="img2">
+        <img src="images/9.png" alt="img2" class="row-start-1">
     </div>
 </section>
-<section class="bg-[#1F1914]">
+<section class="md:bg-[#1F1914] bg-[#000000]">
     <a name="deliverMe"></a>
-    <div class="grid grid-cols-2 items-center justify-items-center pb-[50px]">
+    <div class="grid md:grid-cols-2 gap-2 p-5 md:gap-0 items-center justify-items-center md:pb-[50px]">
         <div class="max-w-[513px]">
-            <h3 class="text-[#CC2027] text-5xl pb-5">Deliver me <br>
-                the free <br>
+            <h3 class="text-[#CC2027] font-bold text-2xl md:text-5xl pb-5">Deliver me <br class="hidden sm:inline" />
+                the free <br class="hidden sm:inline" />
                 PDF preview </h3>
-            <form class="grid w-full max-w-[580px] justify-items-center gap-5 justify-self-center" action="">
+            <form class="grid w-full max-w-[330px] md:max-w-[580px] justify-items-center gap-5 justify-self-center" action="">
                 <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
                 <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
                 <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
-                <button class="w-full rounded-[8px] bg-[#2C2C2C] px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
+                <button class="w-full rounded-[8px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
             </form>
         </div>
-        <img src="images/10.png" alt="img2">
+        <img src="images/10.png" class="hidden md:block" alt="img2">
     </div>
 </section>
 <section class="relative overflow-x-hidden">
-
-    <div class="fixed inset-0 z-[-1] pointer-events-none
-              bg-[url('images/11.png')] bg-fixed bg-cover">
+    <div class="fixed inset-0 z-[-1] bg-center md:bg-[position:unset] pointer-events-none bg-[url('images/11.png')] md:bg-fixed bg-cover">
         <div class="sticky top-0 h-screen
                 flex flex-col items-center
                 pt-[440px]">
-            <h3 class="text-4xl text-white text-center leading-snug">
-                Life is made of stories.<br><br>
-                Become your own hero by crafting your own tales.<br><br>
+            <h3 class="text-4xl text-white p-5 md:p-0 text-left md:text-center">
+                Life is made of stories.<br class="hidden sm:inline" /><br class="hidden sm:inline" />
+                Become your own hero by crafting your own tales.<br class="hidden sm:inline" /><br class="hidden sm:inline" />
                 Be the storyteller, live your truth.
             </h3>
         </div>
@@ -485,27 +483,27 @@
     <div class="h-screen bg-[#020001]"></div>
 </section>
 <section class="bg-[#020001]">
-    <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center">Future games of the Ammortal</h2>
-    <div class="flex items-center flex-col gap-6 justify-center pb-[202px]">
-        <p class="text-white p-20  text-xl">
+    <h2 class="text-[#CC2027] font-[cormorant] font-bold text-3xl md:text-6xl text-center">Future games of the Ammortal</h2>
+    <div class="flex items-center flex-col gap-6 justify-center p-[35px]  md:pb-[202px]">
+        <p class="text-white md:p-20 text-xl text-left">
             <b>Lostlorn </b> is more than a series of games, it is a series of games that lets you play the monster.
         </p>
-        <p class="text-white text-xl">
+        <p class="text-white text-xl text-left">
             <b>BADLANDER™ </b>— Honor & Glory — A Fury of Thorns: The Saga of the Hunter Blade.
         </p>
-        <p class="text-white text-xl">
+        <p class="text-white text-xl text-left">
             <b>BEASTKNIGHT™ </b> Oak & Moon —A Pact of Claws: The Saga of the WereBorn Wolf.
         </p>
-        <p class="text-white text-xl">
+        <p class="text-white text-xl text-left">
             <b>WITCHKNIGHT™ </b> Riddle & Rubric — A Braid of Twines: The Saga of the Magus Weaver.
         </p>
-        <p class="text-white text-xl">
+        <p class="text-white text-xl text-left">
             <b>GHASTKNIGHT™ </b> Blight & Doom — An Echo of Curses: The Saga of the Ghostly Wraiths.
         </p>
-        <p class="text-white text-xl">
+        <p class="text-white text-xl text-left">
             <b>SYLPHKNIGHT™ </b>  Dreams & Fables — A Lark of Wisps: The Saga of the Faerie Whisper.
         </p>
-        <p class="text-white text-xl">
+        <p class="text-white text-xl text-left">
             <b>VILEKNIGHT™ </b> Dragon & Dæmon — A Ravage of Tusks: The Saga of the Draakon Imp.
         </p>
         <p class="text-white text-xl pt-12">
@@ -517,7 +515,7 @@
         </p>
     </div>
     <div class="flex flex-col gap-8 justify-center items-center">
-        <h3 class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">Become a FangKnight. <br> Join in the ranks.</h3>
+        <h3 class="max-w-[519px] font-bold text-3xl md:text-5xl justify-self-center-safe text-center text-[#CC2027]">Become a FangKnight. <br> Join in the ranks.</h3>
         <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" action="">
             <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
             <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
