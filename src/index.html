@@ -49,7 +49,7 @@
             class="min-h-screen relative"
     >
         <h1
-                :style="`transform: translate(-50%, -50%) scale(${scale})`"
+                :style="`transform: translate(-50%, -50%) scale(${window.innerWidth <= 768 ? Math.min(scale, 1.5) : scale})`"
                 class="absolute top-1/2 left-1/2 text-6xl text-[#CC2027] font-semibold font-[cormorant-sc] origin-center transition-transform duration-200 ease-out"
         >
             Be the monster
@@ -99,10 +99,10 @@
     </h1>
 </section>
 <section class="justify-self-center h-[94%] w-full bg-black bg-[url('images/2.jpeg')] bg-cover bg-center bg-no-repeat"></section>
-<section class="grid gap-20  justify-center bg-black pt-[106px] pb-[100px]">
+<section class="grid gap-20  justify-center h-screen bg-[#020001] pt-[106px] pb-[100px]">
     <a name="contacts"></a>
     <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">
-        <h2 class="font-[cormorant-sc] font-semibold">
+        <h2 class="font-[cormorant-sc] text-3xl  md:text-5xl font-semibold">
             Become a FangKnight. <br> Give us your email <br />
             to not miss the Kickstarter.
         </h2>
@@ -147,7 +147,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] text-4xl font-semibold md:text-6xl text-center mb-12">
         You Are the Monster
     </h2>
 
@@ -168,7 +168,7 @@
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
+                    <li class="flex-shrink-0 items-center text-xl md:text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -204,7 +204,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] text-4xl font-semibold md:text-6xl text-center mb-12">
         Sword to the Firehold
     </h2>
 
@@ -225,7 +225,7 @@
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
+                    <li class="flex-shrink-0 items-center text-xl md:text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -261,7 +261,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] text-4xl font-semibold md:text-6xl text-center mb-12">
         A Gothic World of Vile Uncanny
     </h2>
 
@@ -282,7 +282,7 @@
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
+                    <li class="flex-shrink-0 items-center text-xl md:text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -317,9 +317,9 @@
     prev() { this.current = this.current > 0 ? this.current - 1 : this.items.length - 1 },
     next() { this.current = this.current < this.items.length - 1 ? this.current + 1 : 0 }
   }"
-        class="bg-[#E9C7AC] pt-16 pb-2"
+        class="bg-[#E9C7AC] pt-16 pb-16"
 >
-    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] text-4xl font-semibold md:text-6xl text-center mb-12">
         Dark Fantasy With A Bite
     </h2>
 
@@ -340,7 +340,7 @@
                     :style="`transform: translateX(-${current * 100}%)`"
             >
                 <template x-for="(txt, i) in items" :key="i">
-                    <li class="flex-shrink-0 items-center text-2xl px-6 w-full">
+                    <li class="flex-shrink-0 items-center text-xl md:text-2xl px-6 w-full">
                         <span x-text="txt"></span>
                     </li>
                 </template>
@@ -436,9 +436,9 @@
 </section>
 <section class="lg:bg-[#1F1914] bg-[#000000]">
     <a name="deliverMe"></a>
-    <div class="grid lg:grid-cols-2 gap-2 p-5 lg:gap-0 items-center justify-items-center md:pb-[50px]">
+    <div class="grid lg:grid-cols-2 md:gap-2 gap-8  p-5 lg:gap-0 items-center justify-items-center md:pb-[50px]">
         <div class="max-w-[513px]">
-            <h3 class="text-[#CC2027] font-bold text-2xl md:text-5xl pb-5">Deliver me <br class="hidden sm:inline" />
+            <h3 class="text-[#CC2027] font-[cormorant-sc] font-bold text-3xl md:text-5xl pb-5">Deliver me <br class="hidden sm:inline" />
                 the free <br class="hidden sm:inline" />
                 PDF preview </h3>
                 <form id="sib-form" class="grid w-full max-w-[330px] md:max-w-[580px] justify-items-center gap-5 justify-self-center" method="POST" action="https://9c6d0252.sibforms.com/serve/MUIFAMLcJn9uhcvmFV2eeeoCdPLKhvgNgBB8NKIvHG5Jtw2a7Z4p1vVZ-OJKr50y8_CC9dGSiQmjmIn6C43hwWNG6ZAUS2DHeC1hKcNh13zvZ08XyOQycJkRBiDWBGEVaI5OxrVcyn2berv3eBNpWaDozvVDhy5ww3BfS6eNoywRDRwpTNt0B8imjjd90nGgOBy8uvixsqClI-SH">
@@ -451,7 +451,7 @@
                 <button class="w-full cursor-pointer rounded-[8px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
             </form>
         </div>
-        <img src="images/10.png" class="hidden lg:block" alt="img2">
+        <img src="images/14.jpg" width="500" alt="img2">
     </div>
 </section>
 <section class="relative overflow-x-hidden">
@@ -490,7 +490,7 @@
     <div class="h-screen bg-[#020001]"></div>
 </section>
 <section class="bg-[#020001]">
-    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold font-bold text-3xl md:text-6xl text-center">Future games of the Ammortal</h2>
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-3xl md:text-6xl text-center">Future games of the Ammortal</h2>
     <div class="flex items-center flex-col gap-6 justify-center p-[35px]  md:pb-[202px]">
         <p class="text-white md:p-20 text-xl text-left">
             <b>Lostlorn </b> is more than a series of games, it is a series of games that lets you play the monster.
@@ -522,7 +522,7 @@
         </p>
     </div>
     <div class="flex flex-col gap-8 justify-center items-center">
-        <h3 class="max-w-[519px] font-bold text-3xl md:text-5xl justify-self-center-safe text-center text-[#CC2027]">Become a FangKnight. <br> Join in the ranks.</h3>
+        <h3 class="max-w-[519px] font-[cormorant-sc] font-bold text-3xl md:text-5xl justify-self-center-safe text-center text-[#CC2027]">Become a FangKnight. <br> Join in the ranks.</h3>
         <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" id="sib-form" method="POST" action="https://9c6d0252.sibforms.com/serve/MUIFAN3zdGeV4rZW6r6XbQu_zlPsaONk5havhRV8YqF1E-D6OfUsat92WZs8qHrclsDUH7g_hb8toQNikrr7fOefdMhI4Jp_wLlUdcp1_vLf-hJEMCB-DSBu8owFpSnt6peR9DmfcWd5Vx0JBxw2rDX1hNxnTifqQ399360Vh6bKIwbN_WxR1KCc-keUXEBhQf-aDjSlOzJzFChA">
             <input class="input w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="FIRST NAME" data-required="true" required />
             <input class="input w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]"  maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="LAST NAME" />
