@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/hvy8trx.css">
     <link rel="stylesheet" href="https://use.typekit.net/hvy8trx.css">
     <link href="./output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="h-full font-[eb-garamond]"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
 <section>
@@ -45,11 +46,11 @@
   }"
             x-init="init()"
             @scroll.window="onScroll()"
-            class="min-h-screen relative font-[cormorant]"
+            class="min-h-screen relative"
     >
         <h1
                 :style="`transform: translate(-50%, -50%) scale(${scale})`"
-                class="absolute top-1/2 left-1/2 text-6xl text-[#CC2027] origin-center transition-transform duration-200 ease-out"
+                class="absolute top-1/2 left-1/2 text-6xl text-[#CC2027] font-[Cormorant] origin-center transition-transform duration-200 ease-out"
         >
             Be the monster
         </h1>
@@ -97,7 +98,7 @@
         …comes a new tale of gothic horror, medieval corruption, and monstrous power.
     </h1>
 </section>
-<section class="justify-self-center h-[94%] w-full bg-black bg-[url('images/2.jpg')] bg-cover bg-center bg-no-repeat"></section>
+<section class="justify-self-center h-[94%] w-full bg-black bg-[url('images/2.jpeg')] bg-cover bg-center bg-no-repeat"></section>
 <section class="grid gap-20  justify-center bg-black pt-[106px] pb-[100px]">
     <a name="contacts"></a>
     <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">
@@ -107,12 +108,15 @@
         </h2>
     </div>
     <div class="justify-self-center">
-        <form class="grid w-full md:max-w-[580px] max-w-[324px] gap-6" action="">
-            <input class="rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
-            <input class="rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
-            <input class="rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+        <form class="grid w-full max-w-[330px] md:max-w-[580px] justify-items-center gap-5 justify-self-center" id="sib-form" method="POST" action="https://9c6d0252.sibforms.com/serve/MUIFAN3zdGeV4rZW6r6XbQu_zlPsaONk5havhRV8YqF1E-D6OfUsat92WZs8qHrclsDUH7g_hb8toQNikrr7fOefdMhI4Jp_wLlUdcp1_vLf-hJEMCB-DSBu8owFpSnt6peR9DmfcWd5Vx0JBxw2rDX1hNxnTifqQ399360Vh6bKIwbN_WxR1KCc-keUXEBhQf-aDjSlOzJzFChA">
+            <input class="input w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="FIRST NAME" data-required="true" required />
+            <input class="input w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="LAST NAME" />
+            <input class="input w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="en">
+            <input type="hidden" name="html_type" value="simple">
 
-            <button class="rounded-[8px] px-[114px] bg-[#2C2C2C] py-[12px] text-white" type="submit">Bite Me!</button>
+            <button class="w-full cursor-pointer rounded-[8px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
         </form>
     </div>
 </section>
@@ -143,7 +147,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
         You Are the Monster
     </h2>
 
@@ -200,7 +204,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
         Sword to the Firehold
     </h2>
 
@@ -257,7 +261,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
         A Gothic World of Vile Uncanny
     </h2>
 
@@ -315,7 +319,7 @@
   }"
         class="bg-[#E9C7AC] pt-16 pb-2"
 >
-    <h2 class="text-[#CC2027] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
         Dark Fantasy With A Bite
     </h2>
 
@@ -437,11 +441,14 @@
             <h3 class="text-[#CC2027] font-bold text-2xl md:text-5xl pb-5">Deliver me <br class="hidden sm:inline" />
                 the free <br class="hidden sm:inline" />
                 PDF preview </h3>
-            <form class="grid w-full max-w-[330px] md:max-w-[580px] justify-items-center gap-5 justify-self-center" action="">
-                <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
-                <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
-                <input class="w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
-                <button class="w-full rounded-[8px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
+                <form id="sib-form" class="grid w-full max-w-[330px] md:max-w-[580px] justify-items-center gap-5 justify-self-center" method="POST" action="https://9c6d0252.sibforms.com/serve/MUIFAMLcJn9uhcvmFV2eeeoCdPLKhvgNgBB8NKIvHG5Jtw2a7Z4p1vVZ-OJKr50y8_CC9dGSiQmjmIn6C43hwWNG6ZAUS2DHeC1hKcNh13zvZ08XyOQycJkRBiDWBGEVaI5OxrVcyn2berv3eBNpWaDozvVDhy5ww3BfS6eNoywRDRwpTNt0B8imjjd90nGgOBy8uvixsqClI-SH">
+                <input class="input w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]"  maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="FIRST NAME" data-required="true" required />
+                <input class="input w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]" maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="LAST NAME"  />
+                <input class="input w-full rounded-[8px] bg-white px-4 py-2 text-base text-[#CC2027]"  type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="hidden" name="locale" value="en">
+                <input type="hidden" name="html_type" value="simple">
+                <button class="w-full cursor-pointer rounded-[8px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
             </form>
         </div>
         <img src="images/10.png" class="hidden lg:block" alt="img2">
@@ -516,12 +523,15 @@
     </div>
     <div class="flex flex-col gap-8 justify-center items-center">
         <h3 class="max-w-[519px] font-bold text-3xl md:text-5xl justify-self-center-safe text-center text-[#CC2027]">Become a FangKnight. <br> Join in the ranks.</h3>
-        <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" action="">
-            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="name" name="name" placeholder="Name" required />
-            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="surname" name="surname" placeholder="Surname" required />
-            <input class="w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="email" id="email" name="email" placeholder="Email" required />
+        <form class="grid w-full md:max-w-[580px] max-w-[324px] justify-items-center gap-2.5 justify-self-center" id="sib-form" method="POST" action="https://9c6d0252.sibforms.com/serve/MUIFAN3zdGeV4rZW6r6XbQu_zlPsaONk5havhRV8YqF1E-D6OfUsat92WZs8qHrclsDUH7g_hb8toQNikrr7fOefdMhI4Jp_wLlUdcp1_vLf-hJEMCB-DSBu8owFpSnt6peR9DmfcWd5Vx0JBxw2rDX1hNxnTifqQ399360Vh6bKIwbN_WxR1KCc-keUXEBhQf-aDjSlOzJzFChA">
+            <input class="input w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="FIRST NAME" data-required="true" required />
+            <input class="input w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]"  maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="LAST NAME" />
+            <input class="input w-10/12 rounded-[8px] bg-white px-4 py-3 text-base text-[#CC2027]" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="en">
+            <input type="hidden" name="html_type" value="simple">
 
-            <button class="md:w-10/12 rounded-[8px] px-[114px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
+            <button class="md:w-10/12 cursor-pointer rounded-[8px] px-[114px] bg-[#2C2C2C] md:px-[214px] py-[12px] text-white" type="submit">Bite Me!</button>
         </form>
         <img src="images/12.png" width="338" alt="cover1" class="justify-self-end" />
     </div>

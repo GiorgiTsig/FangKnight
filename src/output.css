@@ -7,7 +7,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -27,8 +31,10 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-snug: 1.375;
+    --leading-relaxed: 1.625;
     --radius-lg: 0.5rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -425,6 +431,9 @@
   .bg-\[url\(\'images\/1\.jpeg\'\)\] {
     background-image: url('images/1.jpeg');
   }
+  .bg-\[url\(\'images\/2\.jpeg\'\)\] {
+    background-image: url('images/2.jpeg');
+  }
   .bg-\[url\(\'images\/2\.jpg\'\)\] {
     background-image: url('images/2.jpg');
   }
@@ -532,6 +541,9 @@
   }
   .text-left {
     text-align: left;
+  }
+  .font-\[Cormorant\] {
+    font-family: Cormorant;
   }
   .font-\[cormorant\] {
     font-family: cormorant;
@@ -668,16 +680,6 @@
       display: inline;
     }
   }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
-    }
-  }
-  .md\:inline {
-    @media (width >= 48rem) {
-      display: inline;
-    }
-  }
   .md\:h-\[1142px\] {
     @media (width >= 48rem) {
       height: 1142px;
@@ -686,11 +688,6 @@
   .md\:w-10\/12 {
     @media (width >= 48rem) {
       width: calc(10/12 * 100%);
-    }
-  }
-  .md\:max-w-\[513px\] {
-    @media (width >= 48rem) {
-      max-width: 513px;
     }
   }
   .md\:max-w-\[580px\] {
@@ -702,35 +699,6 @@
     @media (width >= 48rem) {
       --tw-translate-x: calc(35vw - 2rem);
       translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .md\:grid-cols-2 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
-    }
-  }
-  .md\:gap-0 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:space-x-8 {
-    @media (width >= 48rem) {
-      :where(& > :not(:last-child)) {
-        --tw-space-x-reverse: 0;
-        margin-inline-start: calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));
-        margin-inline-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)));
-      }
-    }
-  }
-  .md\:bg-\[\#1F1914\] {
-    @media (width >= 48rem) {
-      background-color: #1F1914;
     }
   }
   .md\:bg-\[\#773B3D\] {
@@ -811,11 +779,6 @@
       max-width: 513px;
     }
   }
-  .lg\:max-w-\[580px\] {
-    @media (width >= 64rem) {
-      max-width: 580px;
-    }
-  }
   .lg\:grid-cols-2 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -845,20 +808,9 @@
       background-color: #1F1914;
     }
   }
-  .lg\:px-\[214px\] {
-    @media (width >= 64rem) {
-      padding-inline: 214px;
-    }
-  }
   .lg\:pb-\[50px\] {
     @media (width >= 64rem) {
       padding-bottom: 50px;
-    }
-  }
-  .lg\:text-5xl {
-    @media (width >= 64rem) {
-      font-size: var(--text-5xl);
-      line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
 }
