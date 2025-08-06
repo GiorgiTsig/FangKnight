@@ -7,8 +7,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/hvy8trx.css">
     <link rel="stylesheet" href="https://use.typekit.net/hvy8trx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mgj3yty.css">
     <link href="./output.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="h-full font-[eb-garamond]"  x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 380;">
 <section>
@@ -50,7 +50,7 @@
     >
         <h1
                 :style="`transform: translate(-50%, -50%) scale(${scale})`"
-                class="absolute top-1/2 left-1/2 text-6xl text-[#CC2027] font-[Cormorant] origin-center transition-transform duration-200 ease-out"
+                class="absolute top-1/2 left-1/2 text-6xl text-[#CC2027] font-semibold font-[cormorant-sc] origin-center transition-transform duration-200 ease-out"
         >
             Be the monster
         </h1>
@@ -66,7 +66,7 @@
         }, { threshold: 0.1 }).observe($el)
       "
                 :class="visible ? 'opacity-100' : 'opacity-0'"
-                class="opacity-0 font-[cormorant] transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
+                class="opacity-0 font-[cormorant-sc] font-semibold transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
         >
             From the quill of Mark Rein•Hagen,
         </h2>
@@ -79,7 +79,7 @@
         }, { threshold: 0.1 }).observe($el)
       "
                 :class="visible ? 'opacity-100' : 'opacity-0'"
-                class="opacity-0 font-[cormorant] transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
+                class="opacity-0 font-[cormorant-sc] font-semibold transition-opacity duration-700 ease-in-out max-w-[519px] justify-self-center-safe text-3xl text-white"
         >
             creator of Vampire: The Masquerade…
         </h2>
@@ -93,7 +93,7 @@
       }, { threshold: 0.1 }).observe($el)
     "
             :class="visible ? 'opacity-100' : 'opacity-0'"
-            class="opacity-0 font-[cormorant] transition-opacity pt-[295px] duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
+            class="opacity-0 font-[cormorant-sc] font-semibold transition-opacity pt-[295px] duration-700 ease-in-out max-w-[906px] justify-self-center-safe pb-[313px] text-center text-3xl text-white"
     >
         …comes a new tale of gothic horror, medieval corruption, and monstrous power.
     </h1>
@@ -102,7 +102,7 @@
 <section class="grid gap-20  justify-center bg-black pt-[106px] pb-[100px]">
     <a name="contacts"></a>
     <div class="max-w-[519px] justify-self-center-safe text-center text-5xl text-[#CC2027]">
-        <h2 class="font-[cormorant]">
+        <h2 class="font-[cormorant-sc] font-semibold">
             Become a FangKnight. <br> Give us your email <br />
             to not miss the Kickstarter.
         </h2>
@@ -147,7 +147,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
         You Are the Monster
     </h2>
 
@@ -204,7 +204,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
         Sword to the Firehold
     </h2>
 
@@ -261,7 +261,7 @@
   }"
         class="bg-[#E9C7AC] pt-16"
 >
-    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
         A Gothic World of Vile Uncanny
     </h2>
 
@@ -319,7 +319,7 @@
   }"
         class="bg-[#E9C7AC] pt-16 pb-2"
 >
-    <h2 class="text-[#CC2027] font-[Cormorant] text-6xl text-center mb-12">
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center mb-12">
         Dark Fantasy With A Bite
     </h2>
 
@@ -397,8 +397,8 @@
             :style="`transform: translateY(-${offset * 0.2}px)`"
     >
         <div class="pl-[27px]">
-            <h2 class="text-white font-[cormorant] text-6xl pb-[185px]">Heroes die—</h2>
-            <h2 class="text-white font-[cormorant] text-6xl">Monsters endure</h2>
+            <h2 class="text-white font-[cormorant-sc] font-semibold text-6xl pb-[185px]">Heroes die—</h2>
+            <h2 class="text-white font-[cormorant-sc] font-semibold text-6xl">Monsters endure</h2>
         </div>
         <p class="text-2xl text-white self-end pb-[76px]">
             This isn’t about saving the day.<br />
@@ -409,7 +409,7 @@
     </div>
 </section>
 <section class="lg:bg-[#1F1914] bg-[#000000]">
-    <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center pt-[92px] pb-[101px]">The Rules</h2>
     <div class="grid lg:grid-cols-2 gap-2 p-5 lg:gap-0 items-center justify-items-center lg:pb-[50px]">
         <div class="max-w-[513px]">
             <p class="text-2xl text-white pb-4.5">
@@ -481,7 +481,7 @@
                 [clip-path:polygon(0%_24%,100%_-1%,100%_100%,0%_76%)]
                 [backface-visibility:hidden]
                 [transform:translateZ(0)] px-8">
-            <h2 class="text-[#CC2027] font-[cormorant] text-6xl text-center leading-snug">
+            <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold text-6xl text-center leading-snug">
                 Rule the Night.<br/>Fear the Dawn.
             </h2>
         </div>
@@ -490,7 +490,7 @@
     <div class="h-screen bg-[#020001]"></div>
 </section>
 <section class="bg-[#020001]">
-    <h2 class="text-[#CC2027] font-[cormorant] font-bold text-3xl md:text-6xl text-center">Future games of the Ammortal</h2>
+    <h2 class="text-[#CC2027] font-[cormorant-sc] font-semibold font-bold text-3xl md:text-6xl text-center">Future games of the Ammortal</h2>
     <div class="flex items-center flex-col gap-6 justify-center p-[35px]  md:pb-[202px]">
         <p class="text-white md:p-20 text-xl text-left">
             <b>Lostlorn </b> is more than a series of games, it is a series of games that lets you play the monster.

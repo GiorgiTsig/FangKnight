@@ -545,6 +545,9 @@
   .font-\[Cormorant\] {
     font-family: Cormorant;
   }
+  .font-\[cormorant-sc\] {
+    font-family: cormorant-sc;
+  }
   .font-\[cormorant\] {
     font-family: cormorant;
   }
@@ -590,6 +593,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
   .text-\[\#CC2027\] {
     color: #CC2027;
